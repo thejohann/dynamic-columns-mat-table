@@ -36,6 +36,7 @@ export class TablePaginationExample {
     this.changeColumns();
   }
 
+  /** switch the data source / adapt the columns / build displayedColumns */
   changeColumns(): void {
     console.log("changing columns");
     this.even = !this.even;
@@ -49,6 +50,9 @@ export class TablePaginationExample {
   }
 }
 
+/**
+ * Connects to the API and loads both header and data information
+ */
 class ExampleDataSource extends DataSource<any> {
   source: any;
 
